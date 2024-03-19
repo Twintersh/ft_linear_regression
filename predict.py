@@ -1,4 +1,6 @@
 import sys
+import matplotlib.pyplot as plt
+import pandas
 
 def getMileage():
 	prompt = input("Give the mileage of the car: ")
@@ -9,6 +11,11 @@ def getMileage():
 
 if __name__ == "__main__":
 	try:
-		mileage = getMileage()
+		# mileage = getMileage()
+		dataset = pandas.read_csv("data.csv")
+		x = dataset.iloc[:,0].values
+		y = dataset.iloc[:,1].values
+
+
 	except SystemExit as e:
 		print(e)
