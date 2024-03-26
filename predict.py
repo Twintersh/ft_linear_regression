@@ -1,6 +1,7 @@
 import sys
 import matplotlib.pyplot as plt
 import pandas
+import shelve
 
 def getMileage():
 	prompt = input("Give the mileage of the car: ")
@@ -11,10 +12,12 @@ def getMileage():
 
 if __name__ == "__main__":
 	try:
+		file = shelve.open(".thetas")
+		theta1 = file.get("theta0", 0)
+		theta0 = file.get("theta1", 0)
+
 		# mileage = getMileage()
-		dataset = pandas.read_csv("data.csv")
-		x = dataset.iloc[:,0].values
-		y = dataset.iloc[:,1].values
+		
 
 
 	except SystemExit as e:
