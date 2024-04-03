@@ -4,10 +4,10 @@ import pandas
 import shelve
 
 # theta0 = 9400
-# theta1 = 	-0.028
+# theta1 = -0.028
 
 def estimatePrice(mileage, theta0, theta1):
-	return(theta0 + theta1 * mileage)
+	return(theta0 + (theta1 * mileage))
 
 def train():
 	file = shelve.open(".thetas")
@@ -18,8 +18,8 @@ def train():
 	x = dataset.iloc[:,0].values
 	y = dataset.iloc[:,1].values
 	m = len(x)
-	learningRate = 0.01
-	total0 = 0 
+	learningRate = 0.0001
+	total0 = 0
 	total1 = 0 
 	
 	for i in range(m):
@@ -48,7 +48,6 @@ if __name__ == "__main__":
 		plt.title("A simple line graph")
 		plt.show()
 		
-
 	except SystemExit as e:
 		print(e)
 
