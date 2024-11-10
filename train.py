@@ -20,7 +20,7 @@ def train(x, y):
     epochs = 1000  
     m = float(len(x))
 
-    # Performing Gradient Descent 
+    # Process Gradient Descent 
     for i in range(epochs): 
         y_pred = t1 * x + t0 
         tmp_t1 = L * (1 / m) * sum(x * (y_pred - y))
