@@ -2,16 +2,12 @@ import matplotlib.pyplot as plt
 import pandas
 import shelve
 from predict import estimatePrice
+from utils import getDataset, getThetas
 
 if __name__ == "__main__":
     try:
-        dataset = pandas.read_csv("data.csv")
-        x = dataset.iloc[:,0].values
-        y = dataset.iloc[:,1].values
-
-        file = shelve.open(".thetas")
-        t0 = file.get("theta0", 0)
-        t1 = file.get("theta1", 0)
+        x, y = getDataset()
+        t0, t1 = getThetas()
 
         y_xmin = estimatePrice(min(x), t0, t1)
         y_xmax = estimatePrice(max(x), t0, t1)
