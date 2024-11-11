@@ -24,4 +24,6 @@ if __name__ == "__main__":
             print(f"The estimate price of your car is {price}")
 
     except SystemExit as e:
-        print(f"Error: {e}")
+        print("e")
+        exit(1)
+        

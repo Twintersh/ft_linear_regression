@@ -36,9 +36,10 @@ def train(x, y):
 if __name__ == "__main__":
     try:
         x, y = getDataset()
-
+        
         train(x, y)
         print("Model succesfully trained")
 
     except SystemExit as e:
         print(e)
+        exit(1)
