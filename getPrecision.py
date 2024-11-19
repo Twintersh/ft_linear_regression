@@ -1,7 +1,6 @@
 # program that calculates the precision of the model
 from predict import estimatePrice
 from utils import getThetas, getDataset
-from math import sqrt
 
 def determinationCoef(x, y, t0, t1):
     n = float(len(x))

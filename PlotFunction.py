@@ -1,6 +1,4 @@
 import matplotlib.pyplot as plt
-import pandas
-import shelve
 from predict import estimatePrice
 from utils import getDataset, getThetas
 
