@@ -18,4 +18,4 @@ if __name__ == "__main__":
         plt.show()
     except SystemExit as e:
         print(e)
-        exit(1)
+        exit(42)

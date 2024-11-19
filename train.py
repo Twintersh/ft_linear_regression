@@ -1,7 +1,4 @@
-import pandas
-import shelve
 from sklearn.preprocessing import StandardScaler
-from predict import estimatePrice
 from utils import getDataset, getThetas, saveThetas
 
 def train(x, y):
@@ -16,7 +13,7 @@ def train(x, y):
 
     # setting the necessary variables to process gradient descent algorithm
     L = 0.01
-    epochs = 1000  
+    epochs = 1000
     m = float(len(x))
 
     # Process Gradient Descent 
@@ -42,4 +39,4 @@ if __name__ == "__main__":
 
     except SystemExit as e:
         print(e)
-        exit(1)
+        exit(42)
