@@ -20,9 +20,9 @@ def getDataset():
         return x, y
     except FileNotFoundError:
         exit("File not found.")
-    except pd.errors.EmptyDataError:
+    except pandas.errors.EmptyDataError:
         exit("No data")
-    except pd.errors.ParserError:
+    except pandas.errors.ParserError:
         exit("Parse error")
     except Exception:
         exit("Some other exception")
